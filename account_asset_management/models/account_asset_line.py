@@ -1,5 +1,6 @@
 # Copyright 2009-2018 Noviat
 # Copyright 2021 Tecnativa - João Marques
+# Copyright 2026 NuoBiT Solutions SL - Eric Antones <eantones@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import _, api, fields, models
@@ -25,6 +26,7 @@ class AccountAssetLine(models.Model):
         comodel_name="account.asset.line",
         string="Previous Depreciation Line",
         readonly=True,
+        index=True,
     )
     parent_state = fields.Selection(
         related="asset_id.state",

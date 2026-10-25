@@ -1,6 +1,7 @@
 # Copyright 2009-2018 Noviat
 # Copyright 2021 Tecnativa - João Marques
 # Copyright 2021 Tecnativa - Víctor Martínez
+# Copyright 2026 NuoBiT Solutions SL - Eric Antones <eantones@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import logging
@@ -180,6 +181,7 @@ class AccountMoveLine(models.Model):
         string="Asset",
         ondelete="restrict",
         check_company=True,
+        index=True,
     )
 
     @api.depends("account_id", "asset_id")
